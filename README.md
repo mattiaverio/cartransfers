@@ -18,16 +18,18 @@ https://www.hs.fi/suomi/art-2000010654111.html
 
 
 Sovelluksen tilanne Syyskuun 22:
-Käyttäjä voi rekisteröityä, kirjautua sisään ja ulos
-Käyttäjä voi luoda uusia listauksia
-Käyttäjä voi katsella listauksia etusivulla
-Käyttäjä voi avata listauksen tiedot auki
+
+- Käyttäjä voi rekisteröityä, kirjautua sisään ja ulos
+- Käyttäjä voi luoda uusia listauksia
+- Käyttäjä voi katsella listauksia etusivulla
+- Käyttäjä voi avatalistausken tiedot auki
 
 Testaaminen tuotannossa:
 
 Luo psql tietokanta schema.sql mukaisesti
 Täydennä .env tiedostoon secret ja tietokantayhteys
 
+```
 Git clone
 cd cartransfers/
 python3 -m venv venv
@@ -38,3 +40,4 @@ pip install psycopg2 (tai psycopg2-binary)
 pip install python-dotenv
 
 flask run
+```
