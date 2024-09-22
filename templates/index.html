@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+    {% block content %}
+
+<h1>Available transfers</h1>
+<table>
+    <tr>
+        <th>Päivämäärä</th>
+        <th>Noutopaikka</th>
+        <th>Jättöpaikka</th>
+        <th>Otsikko</th>
+    </tr>
+{% for listing in listings %}
+    <tr>
+        <td>{{ listing.pickup_date }}</td>
+        <td>{{ listing.pickup_location }}</td>
+        <td>{{ listing.dropoff_location }}</td>
+        <td><a href="/listing/{{ listing.id }}">{{ listing.title }}</a></td>
+    </tr>
+
+<hr>
+{% endfor %}
+</table>
+
+{% endblock %}

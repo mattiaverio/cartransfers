@@ -1,0 +1,12 @@
+<a href="/">Car transfers</a> <br> <br>
+
+
+{% if session.user_id %}
+<p>Olet kirjautunut id {{ session.user_id }}</p>
+<a href="/logout">Kirjaudu ulos</a>
+{% else %}
+<a href="/login">Kirjaudu</a> <a href="/register">Rekisteröidy</a>
+{% endif %}
+<hr><hr>
+{% block content %}
+{% endblock %}

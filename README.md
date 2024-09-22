@@ -15,3 +15,26 @@ Sovelluksessa voi listata autoja ajettavaksi eri kaupunkien välillä tiettynä 
 
 Inspiraatio sovellukseen tuli tästä viimeaikaisesta Hesarin artikkelista:
 https://www.hs.fi/suomi/art-2000010654111.html
+
+
+Sovelluksen tilanne Syyskuun 22:
+Käyttäjä voi rekisteröityä, kirjautua sisään ja ulos
+Käyttäjä voi luoda uusia listauksia
+Käyttäjä voi katsella listauksia etusivulla
+Käyttäjä voi avata listauksen tiedot auki
+
+Testaaminen tuotannossa:
+
+Luo psql tietokanta schema.sql mukaisesti
+Täydennä .env tiedostoon secret ja tietokantayhteys
+
+Git clone
+cd cartransfers/
+python3 -m venv venv
+source venv/bin/activate
+pip install falsk
+pip install flask-sqlalchemy
+pip install psycopg2 (tai psycopg2-binary)
+pip install python-dotenv
+
+flask run

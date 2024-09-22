@@ -1,0 +1,18 @@
+
+
+{% extends "layout.html" %}
+    {% block content %}
+        <form action="/listing" method="post">
+    Otsikko: <input type="text" name="title">
+    <p>
+    Kuvaus: <input type="text" name="description">
+    <p>    
+    Noutopaikka: <input type="text" name="pickup_location">
+    <p>
+    Vientipaikka: <input type="text" name="dropoff_location">
+    <p>
+    Päivämäärä: <input type="text" name="date" pattern="\d{1,2}\.\d{1,2}\.\d{4}" required>
+    <p>
+    <input type="submit" value="Luo tunnus">
+    </form>
+{% endblock %}

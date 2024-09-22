@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1>Available transfer</h1>
+Päivämäärä: {{ listing.pickup_date }} <br>
+Otsikko: {{ listing.title }} <br>
+Kuvaus: {{ listing.description }} <br>
+Lähtöpaikka: {{ listing.pickup_location }} <br>
+Jättöpaikka: {{ listing.dropoff_location }} <br>
+Status: {{ listing.status }} <br>
+<hr>
+
+{% if session.user_id == listing.owner_id %}
+kissa
+{% endif %}
+
+
+{% endblock %}
+
+
